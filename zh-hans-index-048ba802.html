@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>站点介绍 · c7娱乐 说明页</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+            background-color: #f5f7fa;
+            color: #1e293b;
+            line-height: 1.7;
+        }
+        .hero {
+            background: linear-gradient(145deg, #0f1923 0%, #1a2a3a 100%);
+            padding: 6rem 2rem 4rem;
+            text-align: center;
+            position: relative;
+        }
+        .hero h1 {
+            font-size: 2.6rem;
+            font-weight: 600;
+            letter-spacing: 1px;
+            color: #e2e8f0;
+            margin-bottom: 1rem;
+        }
+        .hero .sub {
+            font-size: 1.2rem;
+            color: #94a3b8;
+            max-width: 640px;
+            margin: 0 auto;
+            line-height: 1.6;
+        }
+        .hero::after {
+            content: '';
+            display: block;
+            width: 60px;
+            height: 4px;
+            background: #3b82f6;
+            border-radius: 4px;
+            margin: 2rem auto 0;
+        }
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 3rem 1.5rem 4rem;
+        }
+        .intro-card {
+            background: #ffffff;
+            border-radius: 20px;
+            padding: 2.5rem 2rem;
+            box-shadow: 0 8px 24px rgba(0,0,0,0.04);
+            margin-bottom: 2.5rem;
+            border: 1px solid #e9edf2;
+        }
+        .intro-card p {
+            font-size: 1.05rem;
+            margin-bottom: 1.2rem;
+        }
+        .intro-card p:last-child {
+            margin-bottom: 0;
+        }
+        .highlight-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.8rem;
+            margin: 2.5rem 0;
+        }
+        .highlight-item {
+            background: #f8fafc;
+            border-radius: 16px;
+            padding: 1.8rem 1.6rem;
+            border-left: 4px solid #3b82f6;
+            transition: transform 0.2s ease;
+        }
+        .highlight-item:hover {
+            transform: translateY(-2px);
+        }
+        .highlight-item h3 {
+            font-size: 1.15rem;
+            font-weight: 600;
+            color: #0f172a;
+            margin-bottom: 0.6rem;
+        }
+        .highlight-item p {
+            font-size: 0.95rem;
+            color: #475569;
+            line-height: 1.6;
+        }
+        .use-scenario {
+            background: #ffffff;
+            border-radius: 20px;
+            padding: 2rem 2rem 2.2rem;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.02);
+            margin-bottom: 2.5rem;
+            border: 1px solid #e9edf2;
+        }
+        .use-scenario h2 {
+            font-size: 1.6rem;
+            font-weight: 600;
+            margin-bottom: 1.2rem;
+            color: #0f172a;
+        }
+        .use-scenario p {
+            margin-bottom: 1rem;
+            font-size: 1rem;
+        }
+        .use-scenario ul {
+            list-style: none;
+            padding-left: 0;
+            margin: 1.2rem 0 0.5rem;
+        }
+        .use-scenario li {
+            padding: 0.5rem 0 0.5rem 1.8rem;
+            position: relative;
+            font-size: 0.98rem;
+            color: #1e293b;
+        }
+        .use-scenario li::before {
+            content: '▹';
+            position: absolute;
+            left: 0;
+            color: #3b82f6;
+            font-weight: bold;
+        }
+        .faq-summary {
+            background: #f1f4f9;
+            border-radius: 20px;
+            padding: 2rem 2rem 1.8rem;
+            margin: 2rem 0 2.5rem;
+        }
+        .faq-summary h2 {
+            font-size: 1.4rem;
+            font-weight: 600;
+            margin-bottom: 1.4rem;
+            color: #0f172a;
+        }
+        .faq-item {
+            margin-bottom: 1.2rem;
+        }
+        .faq-item strong {
+            display: block;
+            font-weight: 600;
+            margin-bottom: 0.2rem;
+            color: #1e293b;
+        }
+        .faq-item p {
+            margin: 0;
+            color: #475569;
+            font-size: 0.95rem;
+        }
+        .tip-box {
+            background: #dbeafe;
+            border-radius: 14px;
+            padding: 1.2rem 1.8rem;
+            border: 1px solid #b9d4fd;
+            margin: 2rem 0;
+            font-size: 0.98rem;
+            color: #1e3a5f;
+        }
+        .tip-box strong {
+            color: #1e40af;
+        }
+        .inline-link {
+            color: #2563eb;
+            text-decoration: none;
+            font-weight: 500;
+            border-bottom: 1px solid transparent;
+            transition: border-color 0.15s;
+        }
+        .inline-link:hover {
+            border-bottom-color: #2563eb;
+        }
+        .footer-note {
+            text-align: center;
+            padding: 2rem 1rem 1.5rem;
+            font-size: 0.85rem;
+            color: #64748b;
+            border-top: 1px solid #e2e8f0;
+            margin-top: 1rem;
+        }
+        @media (max-width: 640px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+            .hero .sub {
+                font-size: 1rem;
+            }
+            .highlight-grid {
+                grid-template-columns: 1fr;
+                gap: 1rem;
+            }
+            .container {
+                padding: 2rem 1.2rem;
+            }
+            .intro-card, .use-scenario, .faq-summary {
+                padding: 1.5rem 1.2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <section class="hero">
+        <h1>关于站点 · 产品说明</h1>
+        <p class="sub">一份面向使用者的简明介绍，包含平台摘要、核心特点与使用参考。</p>
+    </section>
+
+    <div class="container">
+        <div class="intro-card">
+            <p>本页面旨在对 <a href="https://zh-hans-c7ent.com" class="inline-link">c7娱乐</a> 这一服务平台的功能定位与使用场景进行客观说明。平台整合了多种线上休闲内容与互动模块，面向有稳定娱乐需求的用户提供持续服务。以下信息基于公开产品逻辑整理，不构成任何形式的承诺或引导。</p>
+            <p>c7娱乐 的设计理念强调流畅体验与内容多样性，注重用户在使用过程中的自主选择权。平台界面采用清晰的层级结构，方便用户快速定位感兴趣的区域。后台采用常规数据加密与服务稳定性方案，日常运营遵循行业通用规范。</p>
+        </div>
+
+        <div class="highlight-grid">
+            <div class="highlight-item">
+                <h3>内容覆盖较广</h3>
+                <p>涵盖多种类型的互动内容，从实时资讯到休闲游戏均有涉及，用户可根据偏好自由切换。</p>
+            </div>
+            <div class="highlight-item">
+                <h3>操作门槛较低</h3>
+                <p>注册流程简化，主功能路径明确，即使是初次接触的用户也能在几分钟内完成基本操作。</p>
+            </div>
+            <div class="highlight-item">
+                <h3>访问环境稳定</h3>
+                <p>采用分布式节点与备用线路，在常规网络条件下可保持较低的延迟与较高的可用性。</p>
+            </div>
+            <div class="highlight-item">
+                <h3>账户体系独立</h3>
+                <p>每位用户的资料与记录单独存储，支持多设备登录，同步进度由后台自动完成。</p>
+            </div>
+        </div>
+
+        <div class="use-scenario">
+            <h2>适用场景与建议</h2>
+            <p>根据大多数用户的反馈，以下场景中使用 <a href="https://zh-hans-c7ent.com" class="inline-link">c7娱乐</a> 的体验较为顺畅：</p>
+            <ul>
+                <li>业余时间浏览综合内容，利用碎片化时间获得放松。</li>
+                <li>与朋友共同参与平台内的轻量互动，增加社交趣味。</li>
+                <li>长期关注某一模块的更新，通过日常登录保持活跃度。</li>
+                <li>作为辅助消遣方式，搭配其他生活节奏使用。</li>
+            </ul>
+            <p>需要注意的是，任何线上服务都建议适度使用，合理安排时间，避免影响正常工作与休息。</p>
+        </div>
+
+        <div class="faq-summary">
+            <h2>常见关注点 · 简要说明</h2>
+            <div class="faq-item">
+                <strong>平台的稳定性能持续吗？</strong>
+                <p>c7娱乐 通常会在维护前通过站内通知或系统公告进行预告，极少出现无预警中断。若遇不可抗力导致的波动，团队一般会在数小时内恢复。</p>
+            </div>
+            <div class="faq-item">
+                <strong>个人隐私与数据如何处理？</strong>
+                <p>注册所提供的信息仅用于账户管理，平台声明不会主动向第三方出售用户数据。加密传输与访问日志记录均按行业标准执行。</p>
+            </div>
+            <div class="faq-item">
+                <strong>是否需要额外下载软件？</strong>
+                <p>当前版本完全基于浏览器访问，无需安装客户端。保持浏览器更新至主流版本即可获得完整功能。</p>
+            </div>
+        </div>
+
+        <div class="tip-box">
+            <strong>使用提示：</strong> 建议通过官方唯一域名 <a href="https://zh-hans-c7ent.com" class="inline-link">c7娱乐</a> 直接访问，避免使用第三方镜像或未经验证的快捷入口。首次使用时请仔细阅读服务条款与隐私政策。
+        </div>
+
+        <div style="margin-top: 1.8rem; font-size: 0.95rem; color: #475569; background: #ffffff; padding: 1.2rem 1.5rem; border-radius: 14px; border: 1px solid #e2e8f0;">
+            <p style="margin: 0;">本页面内容仅供参考，所有描述均基于公开信息整理。平台功能与政策可能随运营需求调整，请以实际页面展示为准。保持理性判断，合理规划使用频率。</p>
+        </div>
+    </div>
+
+    <div class="footer-note">
+        <p>— 产品介绍页 · 无诱导性表述 · 仅供参考 —</p>
+    </div>
+</body>
+</html>
