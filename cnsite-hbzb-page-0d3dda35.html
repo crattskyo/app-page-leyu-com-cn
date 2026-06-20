@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>黑白直播 · 知识速览</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            background-color: #f8f5ef;
+            font-family: "LXGW WenKai", "Noto Serif SC", "Source Han Serif SC", serif;
+            color: #2e2a24;
+            line-height: 1.75;
+            padding: 2rem 1.5rem;
+        }
+        .container {
+            max-width: 880px;
+            margin: 0 auto;
+            background: #fffcf7;
+            padding: 2.5rem 2rem;
+            border-radius: 18px;
+            box-shadow: 0 4px 18px rgba(0,0,0,0.04);
+        }
+
+        h1 {
+            font-size: 2.2rem;
+            font-weight: 500;
+            letter-spacing: 1px;
+            border-left: 6px solid #b7a48a;
+            padding-left: 1.2rem;
+            margin-bottom: 1.8rem;
+            color: #3f392f;
+        }
+        h2 {
+            font-size: 1.5rem;
+            font-weight: 500;
+            margin-top: 2.4rem;
+            margin-bottom: 0.8rem;
+            padding-bottom: 0.3rem;
+            border-bottom: 1px dashed #dcd2c0;
+            color: #4c443b;
+        }
+        h3 {
+            font-size: 1.15rem;
+            font-weight: 500;
+            margin: 1.6rem 0 0.6rem;
+            color: #5f5547;
+        }
+        p {
+            margin-bottom: 1rem;
+            text-align: justify;
+        }
+
+        .intro-block {
+            background: #f7f1e8;
+            border-radius: 12px;
+            padding: 1.5rem 1.8rem;
+            margin: 1.8rem 0;
+            box-shadow: inset 0 1px 3px rgba(0,0,0,0.02);
+        }
+        .intro-block p:last-child { margin-bottom: 0; }
+
+        .info-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.5rem;
+            margin: 1.8rem 0;
+        }
+        .info-card {
+            background: #faf6ef;
+            padding: 1.3rem 1.4rem;
+            border-radius: 14px;
+            border-left: 4px solid #c9bbaa;
+        }
+        .info-card strong {
+            display: block;
+            font-weight: 600;
+            color: #4a4036;
+            margin-bottom: 0.4rem;
+            font-size: 1.05rem;
+        }
+
+        .tip-box {
+            background: #efe9df;
+            border-left: 5px solid #b7a48a;
+            padding: 1.2rem 1.6rem;
+            border-radius: 0 12px 12px 0;
+            margin: 2rem 0 1.6rem;
+        }
+        .tip-box::before {
+            content: "💡 提示";
+            font-weight: 600;
+            display: block;
+            margin-bottom: 0.3rem;
+            color: #5f5547;
+        }
+
+        .faq-item {
+            margin-bottom: 1rem;
+            padding-bottom: 0.8rem;
+            border-bottom: 1px solid #ece4d9;
+        }
+        .faq-q {
+            font-weight: 600;
+            color: #4c443b;
+        }
+        .faq-a {
+            margin-top: 0.2rem;
+            color: #3f392f;
+        }
+
+        a {
+            color: #7f6b54;
+            text-decoration: underline;
+            text-underline-offset: 3px;
+            transition: color 0.2s;
+        }
+        a:hover { color: #4a3d2f; }
+
+        .footer-note {
+            margin-top: 2.8rem;
+            padding-top: 1.2rem;
+            border-top: 1px solid #e0d6c8;
+            font-size: 0.9rem;
+            color: #6f655a;
+            text-align: center;
+        }
+
+        @media (max-width: 640px) {
+            body { padding: 1rem 0.8rem; }
+            .container { padding: 1.8rem 1.2rem; }
+            h1 { font-size: 1.8rem; padding-left: 0.8rem; }
+            .info-grid { grid-template-columns: 1fr; gap: 1rem; }
+            .intro-block { padding: 1.2rem; }
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <h1>黑白直播 · 知识速览</h1>
+
+    <p>
+        当你打开一个以「直播」为名的站点，最直接的诉求往往是快速找到正在进行的赛事、看清赛程，以及判断内容是否可靠。<a href="https://cnsite--hbzb.com">黑白直播</a>便是围绕这些基本需求搭建的信息聚合平台——它不强调花哨的互动，而更注重把赛事导航做得清晰、直接。
+    </p>
+
+    <div class="intro-block">
+        <p><strong>从用户视角看，它解决了什么问题？</strong> 许多体育资讯站把直播链接藏在层层菜单之后，而黑白直播则将分类、赛程、实时比分集中呈现，缩减查找路径。同时，它对不同设备（桌面端与移动端）的适配也相对均衡，减少因页面错位导致的误操作。</p>
+    </div>
+
+    <h2>信息架构与目录感</h2>
+    <p>
+        首页采用纵向分区结构，顶部为导航与当日焦点赛事，中部按联赛/项目划分列表，底部为赛程日历与通用说明。这种布局让访问者可以像翻阅目录一样，按需定位内容，不必反复跳转。
+    </p>
+
+    <div class="info-grid">
+        <div class="info-card">
+            <strong>⚽ 赛事分类</strong>
+            足球、篮球、电竞等主流项目均有独立分区，每个分区内按联赛/杯赛进一步细分，降低信息过载。
+        </div>
+        <div class="info-card">
+            <strong>📅 赛程与状态</strong>
+            每场比赛均标注「未开始」「进行中」「已结束」三种状态，并用颜色区分，一目了然。
+        </div>
+        <div class="info-card">
+            <strong>🔗 直接链接</strong>
+            赛事卡片上直接放置播放页入口，省去中间列表页，减少点击次数。
+        </div>
+        <div class="info-card">
+            <strong>📱 响应式适配</strong>
+            在手机浏览器上，卡片自动变为单列，字体和按钮尺寸相应调整，保留基本阅读体验。
+        </div>
+    </div>
+
+    <h2>使用场景举例</h2>
+    <p>
+        假设你是一个周末想找一场英超回放的用户，打开黑白直播后，顶部焦点区可能已显示当日热门场次；若未找到，则可下拉至「足球」分类下的「英格兰超级联赛」板块，按时间顺序浏览。整个过程中，你不需要注册或登录，也不受弹窗干扰。
+    </p>
+    <p>
+        对于更熟悉赛程的资深观众，赛历视图（日历模式）能帮助你快速定位未来几天的比赛；点击具体日期，该日的赛事列表会折叠展开，节省滚动时间。
+    </p>
+
+    <div class="tip-box">
+        如果你在访问时发现某些赛事卡片显示为灰色，通常意味着该场次尚未确定具体播放源，或版权方临时调整了直播窗口。建议稍后再刷新页面，或切换至相邻的「回放」标签页查找历史内容。
+    </div>
+
+    <h2>常见疑问摘要</h2>
+    <div class="faq-item">
+        <div class="faq-q">Q：需要下载额外软件或插件吗？</div>
+        <div class="faq-a">A：不需要。所有内容均通过浏览器直接播放，不强制安装任何第三方工具。</div>
+    </div>
+    <div class="faq-item">
+        <div class="faq-q">Q：页面上的比赛是实时更新的吗？</div>
+        <div class="faq-a">A：赛程和比分数据会按固定频率刷新，但极端情况下可能存在几分钟延迟，建议以官方赛事数据为准。</div>
+    </div>
+    <div class="faq-item">
+        <div class="faq-q">Q：为什么有些比赛没有播放按钮？</div>
+        <div class="faq-a">A：可能原因包括：比赛尚未开始、当地版权限制、或该场次仅提供文字直播。灰色卡片通常对应「暂无视频源」状态。</div>
+    </div>
+
+    <div class="footer-note">
+        <p>本页为知识介绍，内容基于公开信息整理，仅供参考。实际功能与界面以 <a href="https://cnsite--hbzb.com">黑白直播</a> 站点为准。</p>
+    </div>
+</div>
+</body>
+</html>
